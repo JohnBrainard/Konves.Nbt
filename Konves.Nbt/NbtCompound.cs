@@ -21,6 +21,11 @@ namespace Konves.Nbt
 	/// </summary>
 	public sealed class NbtCompound : NbtTag<NbtTag[]>
 	{
+		/// <summary>
+		/// Initializes a new instance of an <see cref="NbtCompound"/> tag.
+		/// </summary>
+		/// <param name="name">The tag name.</param>
+		/// <param name="value">The value.</param>
 		public NbtCompound(string name, NbtTag[] value)
 			: base(name, NbtTagType.Compound, value) { }
 	}

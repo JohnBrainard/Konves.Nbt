@@ -27,7 +27,7 @@ namespace Konves.Nbt
 	public abstract class NbtTag
 	{
 		/// <summary>
-		/// Initializes a new instance of the <see cref="NbtTag"/> class.
+		/// Initializes a new instance of an <see cref="NbtTag"/>.
 		/// </summary>
 		/// <param name="name">The name.</param>
 		/// <param name="type">The type.</param>

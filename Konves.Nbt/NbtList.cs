@@ -39,6 +39,12 @@ namespace Konves.Nbt
 			m_elementType = elementType;
 		}
 
+		/// <summary>
+		/// Gets the type of the elements contains within this tag's value.
+		/// </summary>
+		/// <value>
+		/// The element type.
+		/// </value>
 		public NbtTagType ElementType { get { return m_elementType; } }
 
 		readonly NbtTagType m_elementType;

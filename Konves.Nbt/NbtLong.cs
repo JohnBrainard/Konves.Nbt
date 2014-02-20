@@ -21,6 +21,11 @@ namespace Konves.Nbt
 	/// </summary>
 	public sealed class NbtLong : NbtTag<long>
 	{
+		/// <summary>
+		/// Initializes a new instance of an <see cref="NbtLong"/> tag.
+		/// </summary>
+		/// <param name="name">The tag name.</param>
+		/// <param name="value">The value.</param>
 		public NbtLong(string name, long value)
 			: base(name, NbtTagType.Long, value) { }
 	}

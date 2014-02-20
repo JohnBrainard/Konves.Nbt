@@ -21,6 +21,11 @@ namespace Konves.Nbt
 	/// </summary>
 	public sealed class NbtByteArray : NbtTag<byte[]>
 	{
+		/// <summary>
+		/// Initializes a new instance of an <see cref="NbtByteArray"/> tag.
+		/// </summary>
+		/// <param name="name">The tag name.</param>
+		/// <param name="value">The value.</param>
 		public NbtByteArray(string name, byte[] value)
 			: base(name, NbtTagType.ByteArray, value) { }
 	}

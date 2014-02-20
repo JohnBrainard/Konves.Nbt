@@ -21,6 +21,11 @@ namespace Konves.Nbt
 	/// </summary>
 	public sealed class NbtFloat : NbtTag<float>
 	{
+		/// <summary>
+		/// Initializes a new instance of an <see cref="NbtFloat"/> tag.
+		/// </summary>
+		/// <param name="name">The tag name.</param>
+		/// <param name="value">The value.</param>
 		public NbtFloat(string name, float value)
 			: base(name, NbtTagType.Float, value) { }
 	}

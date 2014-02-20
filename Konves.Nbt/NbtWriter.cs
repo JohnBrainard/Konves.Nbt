@@ -28,12 +28,12 @@ namespace Konves.Nbt
 		/// <summary>
 		/// Initializes a new instance of the <see cref="NbtWriter"/> class based on the supplied stream.
 		/// </summary>
-		/// <param name="stream">The stream.</param>
+		/// <param name="output">The output stream.</param>
 		/// <exception cref="System.ArgumentException">The stream does not support writing, or the stream is already closed.</exception>
 		/// <exception cref="System.ArgumentNullException"><paramref name="output"/> is <c>null</c>.</exception>
-		public NbtWriter(Stream stream)
+		public NbtWriter(Stream output)
 		{
-			m_binaryWriter = new BinaryWriter(stream);			
+			m_binaryWriter = new BinaryWriter(output);			
 		}
 
 		/// <summary>

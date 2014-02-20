@@ -21,6 +21,11 @@ namespace Konves.Nbt
 	/// </summary>
 	public sealed class NbtString : NbtTag<string>
 	{
+		/// <summary>
+		/// Initializes a new instance of an <see cref="NbtString"/> tag.
+		/// </summary>
+		/// <param name="name">The tag name.</param>
+		/// <param name="value">The value.</param>
 		internal NbtString(string name, string value)
 			: base(name, NbtTagType.String, value) { }
 	}

@@ -21,6 +21,11 @@ namespace Konves.Nbt
 	/// </summary>
 	public sealed class NbtIntArray : NbtTag<int[]>
 	{
+		/// <summary>
+		/// Initializes a new instance of an <see cref="NbtIntArray"/> tag.
+		/// </summary>
+		/// <param name="name">The tag name.</param>
+		/// <param name="value">The value.</param>
 		public NbtIntArray(string name, int[] value)
 			: base(name, NbtTagType.IntArray, value) { }
 	}

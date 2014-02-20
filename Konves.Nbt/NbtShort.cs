@@ -21,6 +21,11 @@ namespace Konves.Nbt
 	/// </summary>
 	public sealed class NbtShort : NbtTag<short>
 	{
+		/// <summary>
+		/// Initializes a new instance of an <see cref="NbtShort"/> tag.
+		/// </summary>
+		/// <param name="name">The tag name.</param>
+		/// <param name="value">The value.</param>
 		internal NbtShort(string name, short value)
 			: base(name, NbtTagType.Short, value) { }
 	}

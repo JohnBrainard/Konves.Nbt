@@ -22,7 +22,7 @@ namespace Konves.Nbt
 	public sealed class NbtByte : NbtTag<byte>
 	{
 		/// <summary>
-		/// Initializes a new instance of a <see cref="NbtByte"/> tag.
+		/// Initializes a new instance of an <see cref="NbtByte"/> tag.
 		/// </summary>
 		/// <param name="name">The tag name.</param>
 		/// <param name="value">The value.</param>

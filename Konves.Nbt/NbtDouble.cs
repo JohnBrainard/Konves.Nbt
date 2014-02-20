@@ -21,6 +21,11 @@ namespace Konves.Nbt
 	/// </summary>
 	public sealed class NbtDouble : NbtTag<double>
 	{
+		/// <summary>
+		/// Initializes a new instance of an <see cref="NbtDouble"/> tag.
+		/// </summary>
+		/// <param name="name">The tag name.</param>
+		/// <param name="value">The value.</param>
 		public NbtDouble(string name, double value)
 			: base(name, NbtTagType.Double, value) { }
 	}

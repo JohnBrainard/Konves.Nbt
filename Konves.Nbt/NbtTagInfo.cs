@@ -25,10 +25,6 @@ namespace Konves.Nbt
 	[DebuggerDisplay("{Type}")]
 	public struct NbtTagInfo
 	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="NbtTagInfo"/> struct.
-		/// </summary>
-		/// <param name="data">The data.</param>
 		private NbtTagInfo(byte[] data)
 		{
 			m_data = data.Length == 3 ? data[0] * 0x010000 + (data.Length >= 3 && data[0] > 0x00 ? data[1] * 0x000100 + data[2] : 0) : 0;			
