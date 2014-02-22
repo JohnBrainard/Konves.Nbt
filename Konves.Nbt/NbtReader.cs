@@ -397,6 +397,29 @@ namespace Konves.Nbt
 
 			return new NbtIntArray(name, value);
 		}
+
+		/// <summary>
+		/// Exposes access to the underlying stream of the <see cref="NbtReader" />.
+		/// </summary>
+		public Stream BaseStream { get { return m_binaryReader.BaseStream; } }
+		
+		/// <summary>
+		/// Gets a value that indicates whether the current stream position is at the end of the stream.
+		/// </summary>
+		/// <value>
+		///   <c>true</c> if the current stream position is at the end of the stream; otherwise <c>false</c>.
+		/// </value>
+		/// <exception cref="System.NotSupportedException">The underlying stream does not support seeking.</exception>
+		public bool EndOfStream
+		{
+			get
+			{
+				if (!m_binaryReader.BaseStream.CanSeek)
+					throw new NotSupportedException("The underlying stream does not support seeking.");
+
+				return m_binaryReader.PeekChar() == -1;
+			}
+		}
 		
 		byte[] ReadNumberData<T>() where T : struct
 		{

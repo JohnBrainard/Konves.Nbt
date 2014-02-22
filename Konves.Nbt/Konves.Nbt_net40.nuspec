@@ -9,6 +9,7 @@
     <projectUrl>https://github.com/skonves/Konves.Nbt</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
+    <releaseNotes>Added base stream properties to NbtReader.</releaseNotes>
     <copyright>Copyright 2014 $author$</copyright>
     <tags>NBT</tags>
   </metadata>
