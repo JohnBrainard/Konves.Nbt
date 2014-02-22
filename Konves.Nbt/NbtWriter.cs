@@ -562,7 +562,7 @@ namespace Konves.Nbt
 		/// </summary>
 		void IDisposable.Dispose()
 		{
-			m_binaryWriter.Dispose();
+			(m_binaryWriter as IDisposable).Dispose();
 		}
 	}
 }

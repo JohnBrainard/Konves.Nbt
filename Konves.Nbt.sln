@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.Nbt", "Konves.Nbt\Konves.Nbt.csproj", "{916F7F2D-C27D-43D9-800E-B682F60D4C53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.Nbt_net40", "Konves.Nbt\Konves.Nbt_net40.csproj", "{916F7F2D-C27D-43D9-800E-B682F60D4C53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

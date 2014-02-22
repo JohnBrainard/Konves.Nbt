@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.Nbt_net40", "Konves.Nbt\Konves.Nbt_net40.csproj", "{916F7F2D-C27D-43D9-800E-B682F60D4C53}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D8036972-CF93-44CA-93D8-3CA11292545E} = {D8036972-CF93-44CA-93D8-3CA11292545E}
+		{DDB65597-79BF-461C-8887-F6C433A003EB} = {DDB65597-79BF-461C-8887-F6C433A003EB}
+		{B83403FA-BE67-42F5-9974-43A814931F09} = {B83403FA-BE67-42F5-9974-43A814931F09}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Konves.Nbt", "Konves.Nbt", "{4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.Nbt_net40-client", "Konves.Nbt\Konves.Nbt_net40-client.csproj", "{DDB65597-79BF-461C-8887-F6C433A003EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.Nbt_net35", "Konves.Nbt\Konves.Nbt_net35.csproj", "{B83403FA-BE67-42F5-9974-43A814931F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.Nbt_net35-client", "Konves.Nbt\Konves.Nbt_net35-client.csproj", "{D8036972-CF93-44CA-93D8-3CA11292545E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AFC4C5A2-1126-474E-9BFB-4B13D775CFB2}"
+	ProjectSection(SolutionItems) = preProject
+		Konves.Nbt\Konves.Nbt_net40.nuspec = Konves.Nbt\Konves.Nbt_net40.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{916F7F2D-C27D-43D9-800E-B682F60D4C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916F7F2D-C27D-43D9-800E-B682F60D4C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916F7F2D-C27D-43D9-800E-B682F60D4C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916F7F2D-C27D-43D9-800E-B682F60D4C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB65597-79BF-461C-8887-F6C433A003EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB65597-79BF-461C-8887-F6C433A003EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB65597-79BF-461C-8887-F6C433A003EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB65597-79BF-461C-8887-F6C433A003EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B83403FA-BE67-42F5-9974-43A814931F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83403FA-BE67-42F5-9974-43A814931F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83403FA-BE67-42F5-9974-43A814931F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B83403FA-BE67-42F5-9974-43A814931F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8036972-CF93-44CA-93D8-3CA11292545E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8036972-CF93-44CA-93D8-3CA11292545E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8036972-CF93-44CA-93D8-3CA11292545E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8036972-CF93-44CA-93D8-3CA11292545E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDB65597-79BF-461C-8887-F6C433A003EB} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
+		{B83403FA-BE67-42F5-9974-43A814931F09} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
+		{D8036972-CF93-44CA-93D8-3CA11292545E} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
+		{916F7F2D-C27D-43D9-800E-B682F60D4C53} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
+	EndGlobalSection
+EndGlobal

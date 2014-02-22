@@ -24,7 +24,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Konves.Nbt")]
 [assembly: AssemblyDescription("C# library for interacting with the NBT file format.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Steve Konves")]
 [assembly: AssemblyProduct("Konves.Nbt")]
 [assembly: AssemblyCopyright("Copyright 2014 Steve Konves")]
 [assembly: AssemblyTrademark("")]
@@ -48,5 +48,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.0.0")]
-[assembly: AssemblyFileVersion("0.1.0.0")]
+[assembly: AssemblyVersion("0.1.0.3")]
+[assembly: AssemblyFileVersion("0.1.0.3")]

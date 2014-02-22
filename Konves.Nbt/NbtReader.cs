@@ -420,7 +420,7 @@ namespace Konves.Nbt
 		/// </summary>
 		void IDisposable.Dispose()
 		{
-			m_binaryReader.Dispose();
+			(m_binaryReader as IDisposable).Dispose();
 		}
 	}
 }
