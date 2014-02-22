@@ -2,6 +2,7 @@
 <package >
   <metadata>
     <id>KonvesNbt</id>
+    <title>Konves.Nbt</title>
     <version>$version$</version>
     <authors>$author$</authors>
     <owners>skonves</owners>
