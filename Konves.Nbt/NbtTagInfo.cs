@@ -72,7 +72,7 @@ namespace Konves.Nbt
 			if (byteArray == null)
 				throw new ArgumentNullException("byteArray", "byteArray is null");
 
-			if (byteArray.Length != 3 || byteArray.Length != 1)
+			if (byteArray.Length != 3 && byteArray.Length != 1)
 				throw new ArgumentException("byteArray is not 1 or 3 bytes in length.", "data");
 
 			if (byteArray[0] < (byte)NbtTagType.IntArray)
