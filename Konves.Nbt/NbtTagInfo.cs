@@ -75,7 +75,7 @@ namespace Konves.Nbt
 			if (byteArray.Length != 3 && byteArray.Length != 1)
 				throw new ArgumentException("byteArray is not 1 or 3 bytes in length.", "data");
 
-			if (byteArray[0] < (byte)NbtTagType.IntArray)
+			if (byteArray[0] > (byte)NbtTagType.IntArray)
 				throw new ArgumentOutOfRangeException("byteArray", "byteArray does not specify a valid tag type.");
 
 			return new NbtTagInfo(byteArray);
