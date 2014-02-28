@@ -18,10 +18,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.Nbt_net35-client", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AFC4C5A2-1126-474E-9BFB-4B13D775CFB2}"
 	ProjectSection(SolutionItems) = preProject
+		Konves.Nbt - Multi Framework.vsmdi = Konves.Nbt - Multi Framework.vsmdi
 		Konves.Nbt\Konves.Nbt_net40.nuspec = Konves.Nbt\Konves.Nbt_net40.nuspec
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.Nbt.Tests", "Konves.Nbt.Tests\Konves.Nbt.Tests.csproj", "{3607CD03-41CF-47EE-96E1-DE5143B83F2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3CB19097-1297-403B-855D-B78C77258C01}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Konves.Nbt - Multi Framework.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -43,14 +53,19 @@ Global
 		{D8036972-CF93-44CA-93D8-3CA11292545E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8036972-CF93-44CA-93D8-3CA11292545E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8036972-CF93-44CA-93D8-3CA11292545E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3607CD03-41CF-47EE-96E1-DE5143B83F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3607CD03-41CF-47EE-96E1-DE5143B83F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3607CD03-41CF-47EE-96E1-DE5143B83F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3607CD03-41CF-47EE-96E1-DE5143B83F2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{916F7F2D-C27D-43D9-800E-B682F60D4C53} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
 		{DDB65597-79BF-461C-8887-F6C433A003EB} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
 		{B83403FA-BE67-42F5-9974-43A814931F09} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
 		{D8036972-CF93-44CA-93D8-3CA11292545E} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
-		{916F7F2D-C27D-43D9-800E-B682F60D4C53} = {4024C3BD-AAAA-4B21-8F80-F74A0F1031E9}
+		{3607CD03-41CF-47EE-96E1-DE5143B83F2F} = {3CB19097-1297-403B-855D-B78C77258C01}
 	EndGlobalSection
 EndGlobal

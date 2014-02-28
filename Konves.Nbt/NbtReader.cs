@@ -420,10 +420,16 @@ namespace Konves.Nbt
 				return m_binaryReader.PeekChar() == -1;
 			}
 		}
-		
+
+		/// <exception cref="System.IO.EndOfStreamException">The end of the stream is reached.</exception>
 		byte[] ReadNumberData<T>() where T : struct
 		{
+			int length = Marshal.SizeOf(typeof(T));
+
 			byte[] data = m_binaryReader.ReadBytes(Marshal.SizeOf(typeof(T)));
+
+			if (data.Length != length)
+				throw new System.IO.EndOfStreamException("The end of the stream is reached.");
 
 			if (BitConverter.IsLittleEndian)
 				Array.Reverse(data);
@@ -431,9 +437,15 @@ namespace Konves.Nbt
 			return data;
 		}
 
+		/// <exception cref="System.IO.EndOfStreamException">The end of the stream is reached.</exception>
 		string ReadStringData(int length)
 		{
-			return length == 0 ? string.Empty : Encoding.UTF8.GetString(m_binaryReader.ReadBytes(length));
+			string name = length == 0 ? string.Empty : Encoding.UTF8.GetString(m_binaryReader.ReadBytes(length));
+
+			if (name.Length != length)
+				throw new System.IO.EndOfStreamException("The end of the stream is reached");
+
+			return name;
 		}
 
 		readonly BinaryReader m_binaryReader;

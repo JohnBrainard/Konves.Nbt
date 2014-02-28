@@ -26,7 +26,7 @@ namespace Konves.Nbt
 		/// </summary>
 		/// <param name="name">The tag name.</param>
 		/// <param name="value">The value.</param>
-		internal NbtShort(string name, short value)
+		public NbtShort(string name, short value)
 			: base(name, NbtTagType.Short, value) { }
 	}
 }
