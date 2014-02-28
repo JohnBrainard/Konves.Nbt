@@ -61,7 +61,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release "$(SolutionDir).nuget\nuget.exe" pack "$(ProjectPath)" -OutputDirectory "$(ProjectDir)bin\$(ConfigurationName)" -Properties Configuration=$(ConfigurationName);Project=$(ProjectDir)</PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Release "$(DevEnvDir)mstest.exe" /nologo /testcontainer:"$(SolutionDir)Konves.Nbt.Tests\bin\$(ConfigurationName)\Konves.Nbt.Tests.dll"
+if $(ConfigurationName) == Release "$(SolutionDir).nuget\nuget.exe" pack "$(ProjectPath)" -OutputDirectory "$(ProjectDir)bin\$(ConfigurationName)" -Properties Configuration=$(ConfigurationName);Project=$(ProjectDir)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
