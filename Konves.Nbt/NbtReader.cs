@@ -76,7 +76,7 @@ namespace Konves.Nbt
 			data[0] = m_binaryReader.ReadByte();
 
 			if (data[0] == 0)
-				return (NbtTagInfo)data;
+				return (NbtTagInfo)new byte[] { 0x00 };
 
 			if (data[0] > (byte)NbtTagType.IntArray)
 			{

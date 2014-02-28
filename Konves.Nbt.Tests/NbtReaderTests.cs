@@ -34,7 +34,7 @@ namespace Konves.Nbt.Tests
 		public void ReadTagInfo_EndTag()
 		{
 			// Arrange
-			byte[] data = new byte[] { 0x00, 0xFF, 0xFF };
+			byte[] data = new byte[] { 0x00};
 			MemoryStream stream = new MemoryStream(data);
 
 			NbtReader reader = new NbtReader(stream);

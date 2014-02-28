@@ -27,7 +27,7 @@ namespace Konves.Nbt
 	{
 		private NbtTagInfo(byte[] data)
 		{
-			m_data = data.Length == 3 ? data[0] * 0x010000 + (data.Length >= 3 && data[0] > 0x00 ? data[1] * 0x000100 + data[2] : 0) : 0;			
+			m_data = data.Length == 3 ? (data[0] << 16) + (data[1] << 8) + data[2] : 0;			
 		}
 
 		/// <summary>
@@ -36,7 +36,7 @@ namespace Konves.Nbt
 		/// <value>
 		/// The type.
 		/// </value>
-		public NbtTagType Type { get { return (NbtTagType)(m_data / 0x010000); } }
+		public NbtTagType Type { get { return (NbtTagType)(m_data >> 16); } }
 
 		/// <summary>
 		/// Gets the length of the tag name.
@@ -72,8 +72,8 @@ namespace Konves.Nbt
 			if (byteArray == null)
 				throw new ArgumentNullException("byteArray", "byteArray is null");
 
-			if (byteArray.Length != 3 && byteArray.Length != 1)
-				throw new ArgumentException("byteArray is not 1 or 3 bytes in length.", "data");
+			if (!((byteArray.Length == 3 && byteArray[0] != 0) || (byteArray.Length == 1 && byteArray[0] == 0)))
+				throw new ArgumentException("byteArray is not 3 bytes in length or a single-byte end tag.", "data");
 
 			if (byteArray[0] > (byte)NbtTagType.IntArray)
 				throw new ArgumentOutOfRangeException("byteArray", "byteArray does not specify a valid tag type.");
