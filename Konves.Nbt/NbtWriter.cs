@@ -33,6 +33,9 @@ namespace Konves.Nbt
 		/// <exception cref="System.ArgumentNullException"><paramref name="output"/> is <c>null</c>.</exception>
 		public NbtWriter(Stream output)
 		{
+			if (output == null)
+				throw new ArgumentNullException("output", "output is null.");
+
 			m_binaryWriter = new BinaryWriter(output);			
 		}
 

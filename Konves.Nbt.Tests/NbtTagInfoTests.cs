@@ -56,7 +56,7 @@ namespace Konves.Nbt.Tests
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentException))]
-		public void OperatorToNbtTagInfo_ArgumentException()
+		public void OperatorToNbtTagInfo_ArgumentException_BadLength()
 		{
 			// Arrange
 			byte[] data = new byte[] { 0x04, 0x03 };

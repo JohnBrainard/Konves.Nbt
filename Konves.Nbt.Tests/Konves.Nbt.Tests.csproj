@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NbtTagInfoTests.cs" />
+    <Compile Include="NbtWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NbtReaderTests.cs" />
   </ItemGroup>
