@@ -127,10 +127,10 @@ namespace Konves.Nbt.Serialization
 
 			if (objects == null)
 			{
-				IEnumerable<object> data = value as IEnumerable<object>;
+				IEnumerable data = (value as IEnumerable);
 
-				if (data != null)
-					objects = data.ToArray();
+				if(data != null)
+					objects = data.Cast<object>().ToArray();
 			}
 
 			if (objects != null)
