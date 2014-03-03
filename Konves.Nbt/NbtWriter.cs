@@ -135,13 +135,17 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, byte value)
 		{
-			Write(new NbtByte(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtByte tag, bool writeHeader)
+		internal void Write(NbtByte tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, byte value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
-			Write(tag.Value);
+				WriteTagHeader(NbtTagType.Byte, name);
+			Write(value);
 		}
 
 		/// <summary>
@@ -167,13 +171,17 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, short value)
 		{
-			Write(new NbtShort(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtShort tag, bool writeHeader)
+		internal void Write(NbtShort tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, short value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
-			Write(tag.Value);
+				WriteTagHeader(NbtTagType.Short, name);
+			Write(value);
 		}
 
 		/// <summary>
@@ -199,13 +207,17 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, int value)
 		{
-			Write(new NbtInt(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtInt tag, bool writeHeader)
+		internal void Write(NbtInt tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, int value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
-			Write(tag.Value);
+				WriteTagHeader(NbtTagType.Int, name);
+			Write(value);
 		}
 
 		/// <summary>
@@ -231,13 +243,17 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, long value)
 		{
-			Write(new NbtLong(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtLong tag, bool writeHeader)
+		internal void Write(NbtLong tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, long value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
-			Write(tag.Value);
+				WriteTagHeader(NbtTagType.Long, name);
+			Write(value);
 		}
 
 		/// <summary>
@@ -263,13 +279,17 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, float value)
 		{
-			Write(new NbtFloat(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtFloat tag, bool writeHeader)
+		internal void Write(NbtFloat tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, float value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
-			Write(tag.Value);
+				WriteTagHeader(NbtTagType.Float, name);
+			Write(value);
 		}
 
 		/// <summary>
@@ -295,13 +315,17 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, double value)
 		{
-			Write(new NbtDouble(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtDouble tag, bool writeHeader)
+		internal void Write(NbtDouble tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, double value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
-			Write(tag.Value);
+				WriteTagHeader(NbtTagType.Double, name);
+			Write(value);
 		}
 
 		/// <summary>
@@ -327,20 +351,24 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, byte[] value)
 		{
-			Write(new NbtByteArray(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtByteArray tag, bool writeHeader)
+		internal void Write(NbtByteArray tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, byte[] value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
-			if (tag.Value == null)
+				WriteTagHeader(NbtTagType.ByteArray, name);
+			if (value == null)
 			{
 				Write((int)0);
 			}
 			else
 			{
-				Write((int)tag.Value.Length);
-				Write(tag.Value);
+				Write((int)value.Length);
+				Write(value);
 			}
 		}
 
@@ -367,21 +395,25 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, string value)
 		{
-			Write(new NbtString(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtString tag, bool writeHeader)
+		internal void Write(NbtString tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, string value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
+				WriteTagHeader(NbtTagType.String, name);
 
-			if (string.IsNullOrEmpty(tag.Value))
+			if (string.IsNullOrEmpty(value))
 			{
 				Write((short)0);
 			}
 			else
 			{
-				Write((short)tag.Value.Length);
-				Write(tag.Value);
+				Write((short)value.Length);
+				Write(value);
 			}
 		}
 
@@ -410,24 +442,28 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, NbtTagType elementType, NbtTag[] value)
 		{
-			Write(new NbtList(name, elementType, value));
+			Write(name, elementType, value, true);
 		}
-		void Write(NbtList tag, bool writeHeader)
+		internal void Write(NbtList tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.ElementType, tag.Value, writeHeader);
+		}
+		internal void Write(string name, NbtTagType elementType, NbtTag[] value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
+				WriteTagHeader(NbtTagType.List, name);
 
-			Write((byte)tag.ElementType);
+			Write((byte)elementType);
 
-			if (tag.Value == null)
+			if (value == null)
 			{
 				Write((int)0);
 			}
 			else
 			{
-				Write((int)tag.Value.Length);
+				Write((int)value.Length);
 
-				foreach (var element in tag.Value)
+				foreach (var element in value)
 					Write(element, false);
 			}
 		}
@@ -455,15 +491,19 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, NbtTag[] value)
 		{
-			Write(new NbtCompound(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtCompound tag, bool writeHeader)
+		internal void Write(NbtCompound tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, NbtTag[] value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
+				WriteTagHeader(NbtTagType.Compound, name);
 
-			if (tag.Value != null)
-				foreach (var element in tag.Value)
+			if (value != null)
+				foreach (var element in value)
 					Write(element);
 
 			Write((byte)0x00);
@@ -492,18 +532,22 @@ namespace Konves.Nbt
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
 		public void Write(string name, int[] value)
 		{
-			Write(new NbtIntArray(name, value));
+			Write(name, value, true);
 		}
-		void Write(NbtIntArray tag, bool writeHeader)
+		internal void Write(NbtIntArray tag, bool writeHeader)
+		{
+			Write(tag.Name, tag.Value, writeHeader);
+		}
+		internal void Write(string name, int[] value, bool writeHeader)
 		{
 			if (writeHeader)
-				WriteTagHeader(tag);
-			Write(tag.Value == null ? 0 : (int)tag.Value.Length);
-			foreach (int element in tag.Value)
+				WriteTagHeader(NbtTagType.IntArray, name);
+			Write(value == null ? 0 : (int)value.Length);
+			foreach (int element in value)
 				Write(element);
 		}
 
-		void Write(byte value)
+		internal void Write(byte value)
 		{
 			m_binaryWriter.Write(value);
 		}
@@ -513,7 +557,7 @@ namespace Konves.Nbt
 			WriteAsBigEndian(BitConverter.GetBytes(value));
 		}
 
-		void Write(int value)
+		internal void Write(int value)
 		{
 			WriteAsBigEndian(BitConverter.GetBytes(value));
 		}
@@ -533,7 +577,7 @@ namespace Konves.Nbt
 			WriteAsBigEndian(BitConverter.GetBytes(value));
 		}
 
-		void Write(byte[] value)
+		internal void Write(byte[] value)
 		{
 			m_binaryWriter.Write(value);
 		}
@@ -543,12 +587,17 @@ namespace Konves.Nbt
 			m_binaryWriter.Write(Encoding.UTF8.GetBytes(value));
 		}
 
+		internal void WriteTagHeader(NbtTagType tagType, string name)
+		{
+			Write((byte)tagType);
+			Write((short)name.Length);
+			if (!string.IsNullOrEmpty(name))
+				Write(name);
+		}
+
 		void WriteTagHeader(NbtTag tag)
 		{
-			Write((byte)tag.Type);
-			Write((short)tag.Name.Length);
-			if (!string.IsNullOrEmpty(tag.Name))
-				Write(tag.Name);
+			WriteTagHeader(tag.Type, tag.Name);
 		}
 
 		void WriteAsBigEndian(byte[] data)
@@ -565,7 +614,7 @@ namespace Konves.Nbt
 		/// </summary>
 		void IDisposable.Dispose()
 		{
-			(m_binaryWriter as IDisposable).Dispose();
+			//(m_binaryWriter as IDisposable).Dispose();
 		}
 	}
 }

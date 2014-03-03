@@ -58,7 +58,14 @@
     <Compile Include="NbtWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NbtTagType.cs" />
+    <Compile Include="Serialization\NbtAttributes.cs" />
+    <Compile Include="Serialization\NbtIgnoreAttribute.cs" />
+    <Compile Include="Serialization\NbtSerializer.cs" />
+    <Compile Include="Serialization\NbtTagAttribute.cs" />
+    <Compile Include="Serialization\SerializationContext.cs" />
+    <Compile Include="Serialization\SerializationInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Release "$(DevEnvDir)mstest.exe" /nologo /testcontainer:"$(SolutionDir)Konves.Nbt.Tests\bin\$(ConfigurationName)\Konves.Nbt.Tests.dll"

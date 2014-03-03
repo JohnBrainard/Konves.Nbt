@@ -507,10 +507,10 @@ namespace Konves.Nbt.Tests
 			MemoryStream stream = new MemoryStream();
 			NbtWriter writer = new NbtWriter(stream);
 			NbtCompound tag = new NbtCompound("asdf", new NbtTag[]
-			{
-				new NbtDouble("asdf", 3.14159265358979311599796346854E0),
-				new NbtShort("asdf", 12345)
-			});
+		    {
+		        new NbtDouble("asdf", 3.14159265358979311599796346854E0),
+		        new NbtShort("asdf", 12345)
+		    });
 			byte[] expected = new byte[] { 0x0A, 0x00, 0x04, 0x61, 0x73, 0x64, 0x66, 0x06, 0x00, 0x04, 0x61, 0x73, 0x64, 0x66, 0x40, 0x09, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18, 0x02, 0x00, 0x04, 0x61, 0x73, 0x64, 0x66, 0x30, 0x39, 0x00 };
 
 			// Act
@@ -542,10 +542,10 @@ namespace Konves.Nbt.Tests
 			NbtWriter writer = new NbtWriter(stream);
 			string name = "asdf";
 			NbtTag[] value = new NbtTag[]
-			{
-				new NbtDouble("asdf", 3.14159265358979311599796346854E0),
-				new NbtShort("asdf", 12345)
-			};
+		    {
+		        new NbtDouble("asdf", 3.14159265358979311599796346854E0),
+		        new NbtShort("asdf", 12345)
+		    };
 			byte[] expected = new byte[] { 0x0A, 0x00, 0x04, 0x61, 0x73, 0x64, 0x66, 0x06, 0x00, 0x04, 0x61, 0x73, 0x64, 0x66, 0x40, 0x09, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18, 0x02, 0x00, 0x04, 0x61, 0x73, 0x64, 0x66, 0x30, 0x39, 0x00 };
 
 			// Act
