@@ -17,6 +17,7 @@
 using System;
 using System.IO;
 using System.Text;
+using System.Collections.Generic;
 
 namespace Konves.Nbt
 {
@@ -489,7 +490,7 @@ namespace Konves.Nbt
 		/// <param name="value">The array of <see cref="NbtTag">NbtTags</see>.</param>
 		/// <exception cref="System.ObjectDisposedException">The stream is closed.</exception>
 		/// <exception cref="System.IO.IOException">An I/O error occured.</exception>
-		public void Write(string name, NbtTag[] value)
+		public void Write(string name, IEnumerable<NbtTag> value)
 		{
 			Write(name, value, true);
 		}
@@ -497,7 +498,7 @@ namespace Konves.Nbt
 		{
 			Write(tag.Name, tag.Value, writeHeader);
 		}
-		internal void Write(string name, NbtTag[] value, bool writeHeader)
+		internal void Write(string name, IEnumerable<NbtTag> value, bool writeHeader)
 		{
 			if (writeHeader)
 				WriteTagHeader(NbtTagType.Compound, name);

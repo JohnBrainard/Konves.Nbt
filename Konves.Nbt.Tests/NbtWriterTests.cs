@@ -506,7 +506,7 @@ namespace Konves.Nbt.Tests
 			// Arrange
 			MemoryStream stream = new MemoryStream();
 			NbtWriter writer = new NbtWriter(stream);
-			NbtCompound tag = new NbtCompound("asdf", new NbtTag[]
+			NbtCompound tag = new NbtCompound("asdf", new NbtTagCollection
 		    {
 		        new NbtDouble("asdf", 3.14159265358979311599796346854E0),
 		        new NbtShort("asdf", 12345)

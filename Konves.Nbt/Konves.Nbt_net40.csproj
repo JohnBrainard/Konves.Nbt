@@ -54,6 +54,7 @@
     <Compile Include="NbtShort.cs" />
     <Compile Include="NbtString.cs" />
     <Compile Include="NbtTag.cs" />
+    <Compile Include="NbtTagCollection.cs" />
     <Compile Include="NbtTagInfo.cs" />
     <Compile Include="NbtWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

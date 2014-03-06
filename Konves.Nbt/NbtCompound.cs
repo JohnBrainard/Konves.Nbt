@@ -17,16 +17,16 @@
 namespace Konves.Nbt
 {
 	/// <summary>
-	/// Represents a named binary tag whose value is an array of named binary tags.
+	/// Represents a named binary tag whose value is an collection of named binary tags.
 	/// </summary>
-	public sealed class NbtCompound : NbtTag<NbtTag[]>
+	public sealed class NbtCompound : NbtTag<NbtTagCollection>
 	{
 		/// <summary>
 		/// Initializes a new instance of an <see cref="NbtCompound"/> tag.
 		/// </summary>
 		/// <param name="name">The tag name.</param>
 		/// <param name="value">The value.</param>
-		public NbtCompound(string name, NbtTag[] value)
+		public NbtCompound(string name, NbtTagCollection value)
 			: base(name, NbtTagType.Compound, value) { }
 	}
 }

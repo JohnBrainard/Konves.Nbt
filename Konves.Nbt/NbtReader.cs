@@ -355,7 +355,7 @@ namespace Konves.Nbt
 
 			string name = ReadStringData(tagInfo.NameLength);
 
-			List<NbtTag> value = new List<NbtTag>();
+			NbtTagCollection value = new NbtTagCollection();
 
 			NbtTagInfo childTagInfo;
 
@@ -369,7 +369,7 @@ namespace Konves.Nbt
 				value.Add(ReadTag(childTagInfo));
 			}
 
-			return new NbtCompound(name, value.ToArray());
+			return new NbtCompound(name, value);
 		}
 
 		/// <summary>
